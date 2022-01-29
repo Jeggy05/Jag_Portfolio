@@ -1,4 +1,4 @@
-# vue-portfolio
+# Jag-portfolio
 
 ## Project setup
 ```
