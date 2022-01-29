@@ -1,0 +1,30 @@
+[
+	{
+		"name": "HTML",
+		"percentage": 30
+	},
+	{
+		"name": "CSS",
+		"percentage": 50
+	},
+	{
+		"name": "JAVASCRIPT",
+		"percentage": 60
+	},
+	{
+		"name": "PHP",
+		"percentage": 60
+	},
+	{
+		"name": "C#",
+		"percentage": 60
+	},
+	{
+		"name": "SQL",
+		"percentage": 75
+	},
+	{
+		"name": "SELENIUM",
+		"percentage": 85
+	}
+]

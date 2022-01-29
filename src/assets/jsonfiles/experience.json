@@ -1,0 +1,52 @@
+[
+	{
+		"company": "Asian Business Software Solution",
+		"year": "Oct 2017 - Present",
+		"industry": "Software Development",
+		"position": "Software QA Engineer",
+		"responsibilities": [
+			"Carryout various type of manual testing such as functional test on our existing products.",
+			"Prepare test plans before performing the testing.",
+			"Prepare test cases when the development process is on-going (while waiting for the release).",
+			"Involve in team meeting and provide ideas when there are any compliance changes.",
+			"Reports bugs in JIRA during testing process.",
+			"Discuss with developers how does the development will be done so that we as QA can understand which part could be a defect prone.",
+			"Discuss with Business Analyst about requirements or compliance changes so that testing can be carryout on the correct flow of the product.",
+			"Introduce automation testing to handle regression test using AUTOIT tool.",
+			"Have done some API testing using POSTMAN and API REST CLIENT tool."
+		],
+		"pictureName": "abss-logo",
+		"visible": true
+	},
+	{
+		"company": "Asian Business Software Solution",
+		"year": "Jan 2015 - Sept 2017",
+		"industry": "Support line",
+		"position": "Technical Support Representative",
+		"responsibilities": [
+			"Have worked in a fast paced call centre environment to take incoming technical calls from customers.(MY & SG)",
+			"Have involved with backend processes such as Data File Repair, Password Extraction and Serial Number Transfer.",
+			"Besides calls, experienced in handling inbound emails in regards to technical queries for MY & SG.",
+			"Able to analyse, troubleshoot and resolved technical issues and product bugs.",
+			"Experienced in carryout software testing for Accounting, Premier and Payroll products.",
+			"Experienced in handling technical issue in regards to other ABSS products such as Financio & Webstore.",
+			"Have also involved in Charlie and Acumatica product testing’s."
+		],
+		"pictureName": "abss-logo",
+		"visible": false
+	},
+	{
+		"company": "FireFly Sdn Bhd",
+		"year": "Jan 2014 - Dec 2014",
+		"industry": "Airlines",
+		"position": "Junior Aircraft Maintenance Technician",
+		"responsibilities": [
+			"Always do some visual check on the aircraft and report to the Technician or Engineer if found any abnormalities.",
+			"Follow Engineers and Technician for assists them during work.",
+			"Always prepared the manual(AMM) for task given by the engineer, read and understand the manual before start doing any particular task.",
+			"After completing any task, always ensure that the area are clean and clear from any Foreign Object Damage(FOD)."
+		],
+		"pictureName": "Firefly",
+		"visible": false
+	}
+]

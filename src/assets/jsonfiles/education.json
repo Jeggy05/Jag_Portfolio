@@ -1,0 +1,39 @@
+{
+ "title": "Educational History",
+ "contents": [
+    {
+      "course": "Diploma of Engineering Technology In Aeroplane Maintenance",
+      "year": "2011 - 2013",
+      "institute": "Admal Aviation College",
+      "achievement": "3.78 in CGPA",
+      "awards": [
+        "CEO Award Of Admal Aviation College",
+        "Nominated for CEO Award of Admal Aviation College in Final Year"
+      ],
+      "visible": true
+    },
+    {
+      "course": "Sijil Pelajaran Malaysia (SPM)",
+      "year": "2009 - 2010",
+      "institute": "Sekolah Menengah Kebangsaan Cheras Jaya",
+      "achievement": "8A 2B",
+      "awards": [
+        "AWARD OF EXCELLENCE IN SPM 2010 - 8A's",
+        "AWARD OF EXCELLENCE IN FINAL YEAR EXAMINATION - 1st Place in 4 Bestari",
+        "AWARD OF EXCELLENCE IN FINAL YEAR EXAMINATION - Top Student in Add. Maths F4"
+      ],
+      "visible": false
+    },
+    {
+      "course": "Penilaian Menengah Rendah (PMR) ",
+      "year": "2006 - 2008",
+      "institute": "Sekolah Menengah Kebangsaan Cheras Jaya",
+      "achievement": "3A 3B 1C",
+      "awards": [
+        "AWARD OF EXCELLENCE IN MID YEAR EXAMINATION - Top Student in Subject History F3",
+        "AWARD OF EXCELLENCE IN MID YEAR EXAMINATION - Top Student in Subject History F2"
+      ],
+      "visible": false
+    }
+   ]
+}
