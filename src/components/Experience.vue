@@ -2,7 +2,7 @@
     <div class="experience">
         <div class="exp-header">
             <i class="fas fa-terminal fa-4x"></i>
-            <h2>Experience</h2>
+            <h2>{{headerTitle}}</h2>
         </div>
         <div class="exp-detail">
             <a v-on:click="previousSlide"><i class="fas fa-chevron-left fa-4x"></i></a>
@@ -30,7 +30,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Experience Details</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">{{popUpTitle}}</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true" v-on:click="show_exp=!show_exp">&times;</span>
                         </button>
@@ -167,46 +167,11 @@ export default {
     name: 'Experience',
     data() {
         return {
+            headerTitle: "Experience",
+            popUpTitle: "Experience Details",
             show_exp: true,
             slide: 0,
             back: false,
-            yest: [
-                {
-                    company: "Asian Business Software Solution",
-                    year: "Oct 2017 - Present",
-                    industry: "Software Development",
-                    position: "Software QA Engineer",
-                    responsibilities: [
-                        "I have learned about airframe technology",
-                        "I have learned about powerplant technology",
-                        "I have learned about propeller and trust me it is so huge you know. Really I ma not lying to you"
-                    ],
-                    visible: true
-                },
-                {
-                    company: "Asian Business Software Solution",
-                    year: "Jan 2015 - Sept 2017",
-                    industry: "Support line",
-                    position: "Technical Support Representative",
-                    responsibilities: [
-                        "I have learned about airframe technology",
-                        "I have learned about powerplant technology",
-                        "I have learned about propeller"
-                    ],
-                    visible: false
-                },
-                {
-                    company: "FireFly Sdb Bhd",
-                    year: "Jan 2014 - Dec 2014",
-                    industry: "Airlines",
-                    position: "Junior Aircraft Maintenance Technician",
-                    responsibilities: [
-                        "I have learned about airframe technology",
-                        "I have learned about powerplant technology"
-                    ],
-                    visible: false
-                }
-            ],
             experience: ExperienceJson
         }
     },
