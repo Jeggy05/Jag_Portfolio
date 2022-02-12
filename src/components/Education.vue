@@ -2,27 +2,27 @@
     <div class="education">
         <div class="edu-header">
             <i class="fas fa-terminal fa-4x"></i>
-            <h2>Education</h2>
+            <h2>{{ headerTitle }}</h2>
         </div>
         <div class="edu-detail">
             <div class="line-head"></div>
-            <p class="year">2008</p>
+            <p class="year">{{ yearsOfEducation[0] }}</p>
             <div class="line"></div>
-            <p class="year">2010</p>
+            <p class="year">{{ yearsOfEducation[1] }}</p>
             <div class="line"></div>
-            <p class="year">2014</p>
+            <p class="year">{{ yearsOfEducation[2] }}</p>
             <div class="line-head"></div>
-            <div class="card one animate__animated" style="width: 25rem;">
+            <div :class="[css.card, css.animate, educations[list-1].type]" v-for="list in educations.length" v-bind:key="list">
                 <div class="card-body">
-                    <h5 class="card-title">Penilaian Menengah Rendah</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">SMK Cheras Jaya</h6>
-                    <p class="card-text">I manage to get 3A 3B 1C in my PMR result</p>
-                    <a type="button" class="btn btn-link" data-toggle="modal" data-target="#educationModalCenter" v-on:click="showEduDetails(0)">
+                    <h5 class="card-title">{{ educations[list-1].title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ educations[list-1].place }}</h6>
+                    <p class="card-text">{{ educations[list-1].description }}</p>
+                    <a type="button" class="btn btn-link" data-toggle="modal" data-target="#educationModalCenter" v-on:click="showEduDetails(list-1)">
                         Click here to see more...
                     </a>
                 </div>
             </div>
-            <div class="card two animate__animated" style="width: 25rem;">
+            <!--<div class="card spm animate__animated" style="width: 25rem;">
                 <div class="card-body">
                     <h5 class="card-title">Sijil Pelajaran Malaysia</h5>
                     <h6 class="card-subtitle mb-2 text-muted">SMK Cheras Jaya</h6>
@@ -32,7 +32,7 @@
                     </a>
                 </div>
             </div>
-            <div class="card three animate__animated" style="width: 25rem;">
+            <div class="card diploma animate__animated" style="width: 25rem;">
                 <div class="card-body">
                     <h5 class="card-title">Diploma In Aeroplane Engineering</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Admal Aviation College</h6>
@@ -41,7 +41,7 @@
                         Click here to see more...
                     </a>
                 </div>
-            </div>
+            </div>-->
         </div>
         <div class="modal fade" id="educationModalCenter" tabindex="-1" role="dialog" aria-labelledby="education" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -68,8 +68,14 @@ export default {
     name: 'Education',
     data() {
         return{
+            headerTitle: "Education",
             popUpTitle: "Awards & Achievements",
             show_edu: false,
+            yearsOfEducation: [2008, 2010, 2014],
+            css: {
+                card: "card",
+                animate: "animate__animated"
+            },
             achievements: [
                 {
                     details: [
@@ -89,7 +95,27 @@ export default {
                     ]
                 }
             ],
-            edu_details: []
+            edu_details: [],
+            educations: [
+                {
+                    type: "pmr",
+                    title: "Penilaian Menengah Rendah",
+                    place: "SMK Cheras Jaya",
+                    description: "I manage to get 3A 3B 1C in my PMR result"
+                },
+                {
+                    type: "spm",
+                    title: "Sijil Pelajaran Malaysia",
+                    place: "SMK Cheras Jaya",
+                    description: "I manage to get 8A 2B in my SPM and been the best student of year 2010"
+                },
+                {
+                    type: "diploma",
+                    title: "Diploma In Aeroplane Engineering",
+                    place: "Admal Aviation College",
+                    description: "My CGPA was 3.74 and I have been listed in Dean List twice in my entire diploma journey!"
+                }
+            ]
         }
     },
     methods: {
@@ -123,12 +149,6 @@ export default {
 }
 
 </script>
-
-
-
-
-
-
 
 <style scoped>
 
@@ -182,19 +202,20 @@ h2 {
     background-color: #1b1717;
     color: white;
     position: absolute;
+    width: 25rem;
 }
 
-.one {
+.pmr {
     top: 20px;
     left: 15%;
 }
 
-.two {
+.spm {
     top: 200px;
     right: 15%;
 }
 
-.three {
+.diploma {
     bottom: 0;
     left: 15%;
 }
