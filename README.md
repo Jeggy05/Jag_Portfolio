@@ -19,9 +19,6 @@ This is not a normal front-end app. I have implemented some difference functiona
 
 ## Upcoming changes (_This section will be updated again in next build_)
 Considering to perform some changes on the existing project
-  1. Move reference section to JSON file so that user (myself) can immediately update reference in the future
-  2. Try to support more than 3 reference on reference section
-  3. Change the Experience section UI/UX design to make more attractive
-  4. Use Google API to support my personal email so that recruiters can reach me via their gmail.
+  1. Use Google API to support my personal email so that recruiters can reach me via their gmail.
 
 ## Screenshots

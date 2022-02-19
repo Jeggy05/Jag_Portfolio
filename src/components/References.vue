@@ -2,7 +2,7 @@
     <div class="reference">
         <div class="ref-header">
             <i class="fas fa-terminal fa-4x"></i>
-            <h2>References</h2>
+            <h2>{{headerTitle}}</h2>
         </div>
         <div class="ref-detail">
             <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -23,8 +23,8 @@
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Send Email</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <h5 class="modal-title">{{popUpTitle}}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @click="exit()"></button>
                             </div>
                             <div class="modal-body">
                                 <form>
@@ -58,12 +58,15 @@
 </template>
 
 <script>
+import ReferenceJson from '../assets/jsonfiles/reference.json'
 
 export default {
     name: "Reference",
     data() {
         return {
-            contacts: [
+            headerTitle: "Reference",
+            popUpTitle: "Send Email",
+            yest: [
                 {
                     firstName: "Wendy",
                     lastName: "Lim",
@@ -86,6 +89,7 @@ export default {
                     picture: "mbappe"
                 }
             ],
+            contacts: ReferenceJson,
             refree: null,
             from_email: null,
             from_name: null,
@@ -124,11 +128,11 @@ export default {
                     }).then((value) => { return value; }).catch((error) => { this.error = error.error; });
                 }
             } else {
-                await this.$gapi.login().then((value) => { return value; }).catch((error) => { this.error = error.error; });
+                await this.$gapi.login().then((value) => { userSignedIn = true; return value; }).catch((error) => { this.error = error.error; });
             }
 
             var user = await this.fetchCurrentUserData();
-
+            console.log(userSignedIn);
             if(user != null && userSignedIn){
                 this.from_email = user.getEmail();
                 this.from_name = user.getName();
@@ -170,6 +174,9 @@ export default {
                alert("Your email is failed to send due to "+ message);
            }
 
+           this.exit();
+       },
+       exit: function(){
            window.$('#emailPopup').modal('hide');
            this.from_email = null;
            this.from_name = null;

@@ -1,0 +1,24 @@
+[
+	{
+		"firstName": "Wendy",
+        "lastName": "Lim",
+        "phone": "0131212345",
+        "email": "wendy@test.com",
+        "picture": "ronaldo"
+	},
+    {
+		"firstName": "Geok Moi",
+        "lastName": "Chua",
+        "phone": "0131212345",
+        "email": "jeggy05@gmail.com",
+        "picture": "messi"
+	},
+    {
+		"firstName": "Priya",
+        "lastName": "Kanesan",
+        "phone": "0131212345",
+        "email": "priya@test.com",
+        "picture": "mbappe"
+	}
+	
+]
