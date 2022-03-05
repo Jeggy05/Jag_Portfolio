@@ -2,7 +2,7 @@
     <div class="contact">
         <div class="contact-header">
             <i class="fas fa-terminal fa-4x"></i>
-            <h2>{{title}}</h2>
+            <h2>{{headerTitle}}</h2>
         </div>
         <div class="contact-detail">
             <div class="main-container">
@@ -12,7 +12,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <a href="" target="_self"><i class="fas fa-envelope fa-2x"></i><p>jeggy05@gmail.com</p></a>
+                        <a @click="email()"><i class="fas fa-envelope fa-2x"></i><p>jeggy05@gmail.com</p></a>
                     </div>
                     <div class="col">
                         <a href="https://github.com/Jeggy05" target="_blank"><i class="fab fa-github fa-2x"></i><p>Jeggy05</p></a>
@@ -26,16 +26,38 @@
                 </div>
             </div>
         </div>
+        <Gmail></Gmail>
     </div>
 </template>
 
 <script>
+import Gmail from './Gmail'
+
 export default {
+    components: {
+        Gmail
+    },
     data() {
         return {
-            title: "Contact",
+            headerTitle: "Contact",
+            popUpTitle: "Awards & Achievements",
             textOne: "Would you like to know more about me?",
-            textTwo: "Let's get in touch!"
+            textTwo: "Let's get in touch!",
+            showPopup: false,
+            personDetail: [
+                {
+                    firstName: "Jagbir",
+                    lastName: "Singh",
+                    phone: "01125625208",
+                    email: "jeggy05@gmail.com",
+                    picture: null
+                }
+            ]
+        }
+    },
+    methods: {
+        email: function(){
+            this.$root.$refs.gmail.getRefreeEmail(this.personDetail[0]);
         }
     }
 }
